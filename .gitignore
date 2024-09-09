@@ -42,3 +42,6 @@ yarn-debug.log*
 Gemfile.lock
 yarn.lock
 /.idea
+
+/app/assets/builds/*
+!/app/assets/builds/.keep
