@@ -1,0 +1,17 @@
+<h1>Edit User</h1>
+
+<%= form_with model: @user, local: true do |form| %>
+  <div class="mb-4">
+    <%= form.label :name, class: "block text-lg font-medium" %>
+    <%= form.text_field :name, class: "mt-1 block w-full border border-gray-300 p-2 rounded" %>
+  </div>
+  <div class="mb-4">
+    <%= form.label :email, class: "block text-lg font-medium" %>
+    <%= form.email_field :email, class: "mt-1 block w-full border border-gray-300 p-2 rounded" %>
+  </div>
+  <div>
+    <%= form.submit "Update User", class: "bg-green-400 text-white py-2 px-4 rounded" %>
+  </div>
+<% end %>
+
+<%= link_to 'Back to List', '/user', class: 'bg-blue-400 text-white py-2 px-4 rounded mt-4' %>
