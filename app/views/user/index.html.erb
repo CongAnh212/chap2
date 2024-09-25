@@ -1,0 +1,21 @@
+<div>
+  <h1 class="text-3xl font-bold">This is user page</h1>
+  <table class="table-auto bg-blue-400 my-3">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <%= button_to 'Add User', '/user/new', method: :get, class: 'bg-green-400 text-white py-2 px-4 rounded mt-2 hover:cursor-pointer' %>
+
+</div>
